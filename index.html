@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diálogo Sistemas - Engenharia de Software</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="content-wrapper">
+        
+        <nav class="navbar navbar-expand-md glass-nav py-3 fixed-top">
+            <div class="container" style="max-width: 1152px;">
+                <a class="navbar-brand text-lg fw-bold text-white tracking-tight" style="font-size: 1.125rem;" href="#">
+                    Diálogo<span class="text-accent">.</span> Sistemas
+                </a>
+                
+                <button class="navbar-toggler border-0 shadow-none px-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <div class="d-flex flex-column flex-md-row align-items-md-center gap-4 mt-3 mt-md-0">
+                        <a href="#servicos" class="nav-link-custom">Serviços</a>
+                        <a href="#metodologia" class="nav-link-custom">Metodologia</a>
+                        <a href="#contato" class="btn btn-primary-custom d-inline-flex align-items-center justify-content-center px-3" style="height: 36px; font-size: 0.875rem;">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="d-flex align-items-center min-vh-90 text-center reveal-on-scroll is-revealed" style="margin-top: 20vh;">
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold text-white mb-4">
+                            Engenharia de Software <span class="text-accent">Focada no Seu Domínio.</span>
+                        </h1>
+                        <p class="lead text-light-gray mb-5 px-md-5">
+                            A Diálogo Sistemas constrói aplicações sob medida e presta consultoria estratégica em TI. Arquitetura limpa, código escalável e comunicação sem ruídos.
+                        </p>
+                        
+                        <div class="mt-4">
+                            <a href="#contato" class="btn btn-primary-custom d-inline-flex align-items-center justify-content-center px-4 gap-2" style="height: 44px; font-size: 1rem;">
+                                Agendar Consultoria Técnica
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-5 my-5">
+            <div class="container reveal-on-scroll" style="max-width: 1152px;">
+                <h2 class="text-center text-accent text-uppercase fw-semibold mb-5" style="letter-spacing: 0.1em; font-size: 0.875rem;">
+                    Serviços
+                </h2>
+                <div class="row g-4 mt-2">
+                    <div class="col-md-6">
+                        <div class="glass-card h-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent mb-4"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            <h3 class="h4 fw-semibold text-white mb-3">Desenvolvimento de Software sob Encomenda</h3>
+                            <p class="text-light-gray lh-lg mb-0">
+                                Transformamos regras de negócio complexas em software de alto desempenho. Sistemas desenvolvidos com rigor técnico, aplicando Clean Architecture e princípios SOLID para garantir manutenibilidade e escalabilidade a longo prazo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="glass-card h-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-accent mb-4"><path d="m8 11 2 2 4-4"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                            <h3 class="h4 fw-semibold text-white mb-3">Consultoria em TI e Arquitetura</h3>
+                            <p class="text-light-gray lh-lg mb-0">
+                                Diagnóstico e evolução de arquiteturas de software. Atuamos na auditoria de código, planejamento de refatorações de sistemas legados e design de soluções robustas, alinhando a tecnologia aos objetivos da sua operação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pilares" class="py-5 my-5">
+            <div class="container reveal-on-scroll" style="max-width: 1152px;">
+                <h2 class="text-center text-accent text-uppercase fw-semibold mb-3" style="letter-spacing: 0.1em; font-size: 0.875rem;">
+                    Rigor Técnico
+                </h2>
+                <h3 class="text-center text-white fw-bold mb-5 pb-3">Não somos "fazedores de tela"<br>Construímos fundações.</h3>
+                
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="glass-card h-100 p-4">
+                            <h4 class="text-white fw-bold mb-3" style="font-size: 1.125rem;">Domain-Driven Design (DDD)</h4>
+                            <p class="text-light-gray small lh-lg mb-0">
+                                O coração do sistema é o seu negócio, não o banco de dados ou o framework. Modelamos o software ao redor das suas regras reais, isolando a infraestrutura tecnológica para que a aplicação possa evoluir sem reescritas dolorosas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="glass-card h-100 p-4">
+                            <h4 class="text-white fw-bold mb-3" style="font-size: 1.125rem;">Clean Architecture & SOLID</h4>
+                            <p class="text-light-gray small lh-lg mb-0">
+                                Mantemos o design coeso: classes pequenas, injeção de dependências e baixo acoplamento garantem que o código seja testável, previsível e fácil de escalar quando a sua operação crescer.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="glass-card h-100 p-4">
+                            <h4 class="text-white fw-bold mb-3" style="font-size: 1.125rem;">Qualidade Implacável</h4>
+                            <p class="text-light-gray small lh-lg mb-0">
+                                Nenhum código vai para produção sem cobertura de testes automatizados e aderência estrita a padrões de formatação e convenções globais. Prevenimos a regressão e garantimos segurança total em cada refatoração.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodologia" class="py-5 my-5">
+            <div class="container reveal-on-scroll" style="max-width: 800px;">
+                <div class="glass-card p-4 p-sm-5 text-center text-md-start">
+                    <h2 class="display-6 fw-bold text-white mb-4">
+                        O nome define nosso processo: <span class="text-accent">Diálogo.</span>
+                    </h2>
+                    <p class="text-light-gray lh-lg mb-0" style="font-size: 1.125rem;">
+                        A falha da maioria dos projetos de software está na desconexão entre o negócio e a engenharia. Nosso método elimina jargões desnecessários e foca no que importa: entender o seu problema a fundo e aplicar a tecnologia correta, mantendo a simplicidade onde é possível e a robustez onde é essencial. Entregas transparentes e código sustentável.
+                    </p>
+                    
+                    <div class="mt-5 p-4 rounded text-start transition-all" style="background: rgba(18, 18, 18, 0.5); border-left: 4px solid var(--accent); border-top: 1px solid rgba(255,255,255,0.02); border-right: 1px solid rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.02);">
+                        <div class="d-flex flex-column flex-md-row align-items-md-center gap-3">
+                            <span class="text-accent fw-bold" style="font-size: 3rem; line-height: 1;">57%</span>
+                            <div>
+                                <p class="text-white mb-1" style="font-size: 1rem; font-weight: 500;">
+                                    dos projetos de TI falham por quebras de comunicação e falta de alinhamento com o negócio.
+                                </p>
+                                <small class="text-white" style="font-size: 0.8rem;">
+                                    — Fonte: <em>Essential Software Project Failure Statistics</em> (Zipdo / Standish Group, 2023)
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="processo" class="py-5 my-5">
+            <div class="container reveal-on-scroll" style="max-width: 1152px;">
+                <h2 class="text-center text-accent text-uppercase fw-semibold mb-5" style="letter-spacing: 0.1em; font-size: 0.875rem;">
+                    Como Operamos
+                </h2>
+                
+                <div class="row g-4">
+                    <div class="col-md-3 col-sm-6 text-center text-md-start">
+                        <div class="text-accent fw-bold mb-3" style="font-size: 2.5rem; opacity: 0.8;">01.</div>
+                        <h4 class="text-white fw-bold mb-2" style="font-size: 1.125rem;">Imersão e Diagnóstico</h4>
+                        <p class="text-light-gray small lh-lg">Auditamos sua arquitetura atual e mapeamos o domínio do problema sem escrever uma linha de código.</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center text-md-start">
+                        <div class="text-accent fw-bold mb-3" style="font-size: 2.5rem; opacity: 0.8;">02.</div>
+                        <h4 class="text-white fw-bold mb-2" style="font-size: 1.125rem;">Design da Solução</h4>
+                        <p class="text-light-gray small lh-lg">Definimos as tecnologias, o design de código e a estratégia de implantação focando em baixo acoplamento e alta performance.</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center text-md-start">
+                        <div class="text-accent fw-bold mb-3" style="font-size: 2.5rem; opacity: 0.8;">03.</div>
+                        <h4 class="text-white fw-bold mb-2" style="font-size: 1.125rem;">Sprints Curtas</h4>
+                        <p class="text-light-gray small lh-lg">Trabalhamos com ciclos ágeis de 2 semanas. Entregas constantes e tangíveis para garantir que o projeto nunca saia dos trilhos.</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 text-center text-md-start">
+                        <div class="text-accent fw-bold mb-3" style="font-size: 2.5rem; opacity: 0.8;">04.</div>
+                        <h4 class="text-white fw-bold mb-2" style="font-size: 1.125rem;">Entrega e Handover</h4>
+                        <p class="text-light-gray small lh-lg">Deploy em nuvem, código versionado com histórico limpo e documentação clara para o seu time interno (se houver).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tecnologias" class="py-5 my-5">
+            <div class="container reveal-on-scroll" style="max-width: 1152px;">
+                <h2 class="text-center text-accent text-uppercase fw-semibold mb-3" style="letter-spacing: 0.1em; font-size: 0.875rem;">
+                    Ecossistema
+                </h2>
+                <h3 class="text-center text-white fw-bold mb-5 pb-3">Tecnologias que Dominamos</h3>
+                
+                <div class="row g-4 text-center justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="glass-card p-4 h-100 d-flex flex-column align-items-center justify-content-center card-hover">
+                            <h4 class="text-white fw-bold mb-0" style="font-size: 1.125rem;">Java</h4>
+                            <small class="text-light-gray mt-2">Spring Boot</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="glass-card p-4 h-100 d-flex flex-column align-items-center justify-content-center card-hover">
+                            <h4 class="text-white fw-bold mb-0" style="font-size: 1.125rem;">PHP</h4>
+                            <small class="text-light-gray mt-2">Core & Legados</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="glass-card p-4 h-100 d-flex flex-column align-items-center justify-content-center card-hover">
+                            <h4 class="text-white fw-bold mb-0" style="font-size: 1.125rem;">Kafka</h4>
+                            <small class="text-light-gray mt-2">Mensageria Real-time</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="glass-card p-4 h-100 d-flex flex-column align-items-center justify-content-center card-hover">
+                            <h4 class="text-white fw-bold mb-0" style="font-size: 1.125rem;">MySQL</h4>
+                            <h4 class="text-white fw-bold mb-0" style="font-size: 1.125rem;">PostgreSQL</h4>
+                            <small class="text-light-gray mt-2">Bases Relacionais</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="glass-card p-4 h-100 d-flex flex-column align-items-center justify-content-center card-hover">
+                            <h4 class="text-white fw-bold mb-0" style="font-size: 1.125rem;">Cloud</h4>
+                            <small class="text-light-gray mt-2">GCP & Azure</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-5 mt-5 mb-5 text-center reveal-on-scroll">
+            <div class="container" style="max-width: 672px;">
+                <h2 class="display-6 fw-bold text-white mb-4">
+                    Projetos complexos exigem fundações sólidas.
+                </h2>
+                <p class="text-light-gray mb-5" style="font-size: 1.125rem;">
+                    Pare de acumular débito técnico. Fale diretamente com quem entende a arquitetura do seu problema.
+                </p>
+              <button data-bs-toggle="modal" data-bs-target="#contactModal" class="btn btn-primary-custom d-inline-flex align-items-center justify-content-center px-4 gap-2" style="height: 44px; font-size: 1rem;">
+                   Conversar sem compromisso
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <footer class="border-top-dark py-4 px-3">
+            <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3" style="max-width: 1152px;">
+                
+                <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3" style="max-width: 1152px;">
+                
+                <div class="d-flex flex-column align-items-center align-items-sm-start">
+                    <span class="nav-link-custom text-center text-sm-start mb-1">© 2026 Diálogo Sistemas. Todos os direitos reservados.</span>
+                    
+                    <div class="text-light-gray d-flex flex-column flex-md-row align-items-center align-items-sm-start gap-1 gap-md-2" style="font-size: 0.75rem;">
+                        <span>CNPJ: 00.000.000/0001-00</span>
+                        <span class="d-none d-md-inline">•</span>
+                        <span>Butantã, São Paulo - SP</span>
+                    </div>
+                </div>
+                
+                <div class="d-flex gap-4 mt-2 mt-sm-0">
+                    <a href="#servicos" class="nav-link-custom">Serviços</a>
+                    <a href="#tecnologias" class="nav-link-custom">Tecnologias</a>
+                    <a href="#metodologia" class="nav-link-custom">Metodologia</a>
+                    <a href="#contato" class="nav-link-custom">Contato</a>
+                </div>
+                
+            </div>
+        </footer>
+
+    </div>
+    <!-- Modal de Contato -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-card border-0" style="padding: 1rem;">
+                
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-white" id="contactModalLabel">Vamos conversar</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                
+                <div class="modal-body pt-4">
+                   <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nome" class="form-label text-light-gray small">Nome completo</label>
+                                <input type="text" class="form-control custom-input" id="nome" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label text-light-gray small">E-mail</label>
+                                <input type="email" class="form-control custom-input" id="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="momento" class="form-label text-light-gray small">Momento do Projeto</label>
+                                <select class="form-select custom-input" id="momento" required>
+                                    <option value="" selected disabled>Selecione o cenário...</option>
+                                    <option value="novo_produto">Criação de Novo Produto / Microsserviço</option>
+                                    <option value="migracao">Refatoração ou Migração de Sistema Legado</option>
+                                    <option value="auditoria">Auditoria de Código / Arquitetura</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="orcamento" class="form-label text-light-gray small">Orçamento Estimado</label>
+                                <select class="form-select custom-input" id="orcamento" required>
+                                    <option value="" selected disabled>Selecione uma faixa...</option>
+                                    <option value="ate_15k">Até R$ 20.000</option>
+                                    <option value="ate_50k">Até R$ 50.000</option>
+                                    <option value="50k_150k">R$ 50.000 a R$ 150.000</option>
+                                    <option value="acima_150k">Acima de R$ 150.000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="mensagem" class="form-label text-light-gray small">Mensagem</label>
+                            <textarea class="form-control custom-input" id="mensagem" placeholder="Descreva o problema de negócio ou desafio de arquitetura..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 py-3 fw-bold">Solicitar Análise Sem Compromisso</button>
+                    </form>
+
+                    <div id="successMessage" class="text-center d-none py-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3">
+                            <path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"></path>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            <path d="m16 19 2 2 4-4"></path>
+                        </svg>
+                        <h4 class="text-white fw-bold mb-2">E-mail Enviado!</h4>
+                        <p class="text-light-gray mb-0">Recebemos as informações! Entraremos em contato em breve.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
