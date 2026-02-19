@@ -181,22 +181,6 @@ $(document).ready(function () {
       }
     });
   }
-  /* ==================================================================
-       LÓGICA DO MODAL DE CONTATO E ENVIO DE E-MAIL
-    ================================================================== */
-  $("#contactForm").on("submit", function (e) {
-    e.preventDefault();
-    const btn = $(this).find('button[type="submit"]');
-    btn.text("Processando...").prop("disabled", true);
-
-    // TODO: Substituir este setTimeout pela chamada AJAX (ex: $.ajax ou fetch)
-    setTimeout(() => {
-      $("#contactForm").slideUp(300, function () {
-        $("#successMessage").removeClass("d-none").hide().fadeIn(400);
-        $("#contactModalLabel").addClass("d-none");
-      });
-    }, 1200);
-  });
 
   $("#contactModal").on("hidden.bs.modal", function () {
     $("#contactForm").trigger("reset").show();
@@ -221,3 +205,39 @@ $(document).ready(function () {
   $(window).on("scroll", validateScrollReveal);
   validateScrollReveal();
 });
+/* ==================================================================
+   LÓGICA DO MODAL DE CONTATO E ENVIO DE E-MAIL
+================================================================== */
+function onSubmit(token) {
+  const btn = $('#contactForm button[type="submit"]');
+  btn.text("Processando...").prop("disabled", true);
+
+  const data = {
+    name: $("#nome").val(),
+    email: $("#email").val(),
+    moment: $("#momento").val(),
+    budget: $("#orcamento").val(),
+    message: $("#mensagem").val(),
+    token: token,
+  };
+
+  console.log("Dados capturados com sucesso. Enviando para a GCP...");
+
+  $.ajax({
+    url: "https://dialogo-contact-api-mgews7ql2q-rj.a.run.app",
+    type: "POST",
+    contentType: "application/json",
+    data: JSON.stringify(data),
+    success: function (res) {
+      $("#contactForm").slideUp(300, function () {
+        $("#successMessage").removeClass("d-none").hide().fadeIn(400);
+        $("#contactModalLabel").addClass("d-none");
+      });
+    },
+    error: function (xhr) {
+      alert("Ocorreu um erro ao enviar a requisição. Tente novamente.");
+      btn.text("Solicitar Análise Sem Compromisso").prop("disabled", false);
+      grecaptcha.reset();
+    },
+  });
+}

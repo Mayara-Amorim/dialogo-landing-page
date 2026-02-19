@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="css/index.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWJ1SNJLS0"></script>
+    <head>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeNQXEsAAAAAFIyZkTwBWaVuEVDqVC_hamigatc"></script>
+  <!-- Your code -->
+</head>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -282,7 +286,7 @@
                 </div>
                 
                 <div class="modal-body pt-4">
-                   <form id="contactForm">
+                   <div id="contactForm">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="nome" class="form-label text-light-gray small">Nome completo</label>
@@ -310,7 +314,7 @@
                                 <select class="form-select custom-input" id="orcamento" required>
                                     <option value="" selected disabled>Selecione uma faixa...</option>
                                     <option value="ate_15k">Até R$ 20.000</option>
-                                    <option value="ate_50k">Até R$ 50.000</option>
+                                    <option value="ate_50k">De R$ 20.000 a 50.000</option>
                                     <option value="50k_150k">R$ 50.000 a R$ 150.000</option>
                                     <option value="acima_150k">Acima de R$ 150.000</option>
                                 </select>
@@ -321,8 +325,8 @@
                             <label for="mensagem" class="form-label text-light-gray small">Mensagem</label>
                             <textarea class="form-control custom-input" id="mensagem" placeholder="Descreva o problema de negócio ou desafio de arquitetura..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary-custom w-100 py-3 fw-bold">Solicitar Análise Sem Compromisso</button>
-                    </form>
+                        <button type="submit" class="g-recaptcha btn btn-primary-custom w-100 py-3 fw-bold" data-sitekey="6LeNQXEsAAAAAFIyZkTwBWaVuEVDqVC_hamigatc" data-callback='onSubmit' data-action="submit">Solicitar Análise Sem Compromisso</button>
+                    </div>
 
                     <div id="successMessage" class="text-center d-none py-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-3">
