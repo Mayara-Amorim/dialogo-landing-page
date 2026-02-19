@@ -181,15 +181,22 @@ $(document).ready(function () {
       }
     });
   }
+  $("#btnRetry").on("click", function () {
+    $("#errorMessage").fadeOut(300, function () {
+      $(this).addClass("d-none");
+      $("#contactModalLabel").removeClass("d-none");
+      $("#contactForm").hide().slideDown(300);
+    });
+  });
 
   $("#contactModal").on("hidden.bs.modal", function () {
     $("#contactForm").trigger("reset").show();
-
     $('#contactForm button[type="submit"]')
       .text("Enviar Mensagem")
       .prop("disabled", false);
     $("#contactModalLabel").removeClass("d-none");
     $("#successMessage").addClass("d-none");
+    $("#errorMessage").addClass("d-none");
   });
 
   /* ==================================================================
@@ -224,6 +231,7 @@ function onSubmit(token) {
   console.log("Dados capturados com sucesso. Enviando para a GCP...");
 
   $.ajax({
+    // url: "http://localhost:8080",
     url: "https://dialogo-contact-api-mgews7ql2q-rj.a.run.app",
     type: "POST",
     contentType: "application/json",
@@ -235,9 +243,14 @@ function onSubmit(token) {
       });
     },
     error: function (xhr) {
-      alert("Ocorreu um erro ao enviar a requisição. Tente novamente.");
+      $("#contactForm").slideUp(300, function () {
+        $("#errorMessage").removeClass("d-none").hide().fadeIn(400);
+        $("#contactModalLabel").addClass("d-none");
+      });
       btn.text("Solicitar Análise Sem Compromisso").prop("disabled", false);
-      grecaptcha.reset();
+      if (typeof grecaptcha !== "undefined") {
+        grecaptcha.reset();
+      }
     },
   });
 }
