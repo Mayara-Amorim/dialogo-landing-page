@@ -14,12 +14,12 @@
 
 ## ⚙️ Ecossistema & Stack Tecnológica
 
-| Categoria | Tecnologias | Objetivo na Arquitetura |
-| :--- | :--- | :--- |
-| **Linguagens** | `Java` (Spring Boot), `PHP` | Microsserviços, sistemas core e refatoração de legados. |
-| **Mensageria** | `Apache Kafka` | Arquitetura orientada a eventos e processamento real-time. |
-| **Dados** | `MySQL`, `PostgreSQL ` | Persistência relacional de alta consistência. |
-| **Infraestrutura** | `GCP`, `Azure`, `Docker` | Implantação escalável e ambientes containerizados. |
+| Categoria          | Tecnologias                 | Objetivo na Arquitetura                                    |
+| :----------------- | :-------------------------- | :--------------------------------------------------------- |
+| **Linguagens**     | `Java` (Spring Boot), `PHP` | Microsserviços, sistemas core e refatoração de legados.    |
+| **Mensageria**     | `Apache Kafka`              | Arquitetura orientada a eventos e processamento real-time. |
+| **Dados**          | `MySQL`, `PostgreSQL `      | Persistência relacional de alta consistência.              |
+| **Infraestrutura** | `GCP`, `Azure`, `Docker`    | Implantação escalável e ambientes containerizados.         |
 
 ---
 
@@ -27,11 +27,11 @@
 
 A aprovação de qualquer Pull Request está condicionada ao cumprimento estrito destas regras:
 
-* **Princípios Base:** Adesão inegociável ao `SOLID`, `DRY` e `KISS`. Aplique padrões de projeto apenas com necessidade real e tangível.
-* **Isolamento de Domínio:** Utilize *Entities*, *Value Objects* e *Repositories* apenas quando fizerem sentido semântico no domínio do negócio.
-* **Limitação de Parâmetros:** Métodos devem possuir **poucos parâmetros**. Se exceder, encapsulamos os dados num DTO (Data Transfer Object).
-* **Coesão de Classes:** As classes devem ter uma única responsabilidade.
-* **Proibições Rigorosas:** É estritamente proibido o uso de métodos estáticos para executar lógica de negócio pura. Exceções não podem ser silenciadas ou mascaradas.
+- **Princípios Base:** Adesão inegociável ao `SOLID`, `DRY` e `KISS`. Aplique padrões de projeto apenas com necessidade real e tangível.
+- **Isolamento de Domínio:** Utilize _Entities_, _Value Objects_ e _Repositories_ apenas quando fizerem sentido semântico no domínio do negócio.
+- **Limitação de Parâmetros:** Métodos devem possuir **poucos parâmetros**. Se exceder, encapsulamos os dados num DTO (Data Transfer Object).
+- **Coesão de Classes:** As classes devem ter uma única responsabilidade.
+- **Proibições Rigorosas:** É estritamente proibido o uso de métodos estáticos para executar lógica de negócio pura. Exceções não podem ser silenciadas ou mascaradas.
 
 ---
 
@@ -55,6 +55,9 @@ A aprovação de qualquer Pull Request está condicionada ao cumprimento estrito
     <td>Aderência obrigatória aos padrões mundiais <b>PSR-1</b> e <b>PSR-12</b>.</td>
   </tr>
 </table>
+<div align="center">
+  <img src="image.png" alt="Preview da Landing Page da Diálogo Sistemas" width="100%" style="max-width: 850px; border-radius: 8px;">
+</div>
 <div align="center">
 <p><i>© 2026 Diálogo Sistemas. Código sustentável, entregas transparentes.</i></p>
 </div>
