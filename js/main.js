@@ -5,8 +5,9 @@ $(document).ready(function () {
     canvas: canvas,
     antialias: false,
     alpha: false,
+    powerPreference: "high-performance",
   });
-  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
   renderer.setSize(window.innerWidth, window.innerHeight);
 
   const scene = new THREE.Scene();
@@ -136,8 +137,21 @@ $(document).ready(function () {
   });
 
   const clock = new THREE.Clock();
+  let isCanvasVisible = true;
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isCanvasVisible = entries[0].isIntersecting;
+      },
+      { threshold: 0 },
+    );
+    observer.observe(canvas);
+  }
+
   function animate() {
     requestAnimationFrame(animate);
+    if (!isCanvasVisible) return;
+
     uniforms.uTime.value = clock.getElapsedTime();
     uniforms.uScroll.value += (targetScroll - uniforms.uScroll.value) * 0.05;
     renderer.render(scene, camera);
