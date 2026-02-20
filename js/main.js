@@ -101,15 +101,33 @@ function onSubmit(token) {
    INJEÇÃO DINÂMICA DO WEBGL
 ================================================================== */
 // Só carrega o fundo 3D quando a página inteira (textos, css, fontes) já terminou de carregar
-$(window).on("load", function () {
-  // Atraso de 500ms para garantir que a CPU do celular ficou 100% livre
-  setTimeout(function () {
-    const script = document.createElement("script");
-    script.src =
-      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
-    script.onload = initWebGLBackground; // Quando terminar de baixar, roda a função abaixo
-    document.body.appendChild(script);
-  }, 500);
+let heavyAssetsLoaded = false;
+
+function loadHeavyAssets() {
+  if (heavyAssetsLoaded) return;
+  heavyAssetsLoaded = true;
+
+  console.log("Interação humana detectada. Carregando WebGL e Segurança...");
+
+  // 1. Injeta o reCAPTCHA dinamicamente
+  const recaptchaScript = document.createElement("script");
+  recaptchaScript.src = "https://www.google.com/recaptcha/api.js";
+  document.body.appendChild(recaptchaScript);
+
+  // 2. Injeta o Three.js dinamicamente e, quando terminar, inicia o fundo
+  const threeScript = document.createElement("script");
+  threeScript.src =
+    "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
+  threeScript.onload = initWebGLBackground;
+  document.body.appendChild(threeScript);
+}
+
+// Ouve o primeiro movimento do utilizador (rato, toque ou scroll)
+["scroll", "mousemove", "touchstart", "click"].forEach(function (eventName) {
+  window.addEventListener(eventName, loadHeavyAssets, {
+    once: true,
+    passive: true,
+  });
 });
 
 function initWebGLBackground() {
